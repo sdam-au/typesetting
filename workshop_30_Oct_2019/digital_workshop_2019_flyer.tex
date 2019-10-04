@@ -1,0 +1,87 @@
+% Flyer
+
+\enableregime [utf]
+\mainlanguage [en]
+
+\setuppapersize[A4, portrait][A4, portrait]
+%https://wiki.contextgarden.net/Simplefonts
+%\definefontfamily [main] [serif] [Palatino] [expansion=quality,protrusion=quality]
+
+
+\setupexternalfigures[directory={img, /home/petra/workshop/img}]
+
+%\definetypeface [palatino] [rm] [serif] [palatino] [default] [encoding=ec]
+%\switchtotypeface [palatino]
+
+%\setmainfont[palatino][expansion=quality,protrusion=quality]
+
+\setupalign[hz,hanging]
+
+\definefontfeature
+  [default]
+  [default]
+  [protrusion=quality,expansion=quality]
+% \definefontfamily[myfamily][serif][gentium][protrusion=quality,expansion=quality]
+
+% \setupbodyfont[myfamily,14pt]
+
+
+\setuplayout[backspace=15mm,  height=270mm, width=180mm, topspace=0mm, header=-5mm, footer=-30mm, bottomspace=0mm]
+
+\setuppagenumbering[state=stop]
+
+\color[black]
+
+\setupalign[middle]
+
+\setupwhitespace[big]
+
+\setupinterlinespace[big]
+
+\setupindenting[medium,yes]
+\setupitemize[indentnext=auto]
+
+\setupinteraction
+   [state=start,
+    color=blue,
+    style=bold]
+
+\starttext
+
+\placefigure[none]{}{\externalfigure[../img/workshop.png][width=1.3\textwidth]}
+
+\blank[12mm]
+\setupbodyfont [gentium, 30pt, bf]
+
+\color[darkblue]{\bf Digital Approaches to Research in Humanities and Social Sciences}
+
+\setupbodyfont [gentium, 16pt]
+\blank[12mm]
+
+\setupalign[hz,hanging,lesshyphenation]
+
+The workshop will serve as a forum for reflection on the glories and challenges of building digital collaborations, embedding best digital practice in individual research, maintaining digital infrastructures, and coping with the possibilities and constraints of the digital medium. A series of internal and external speakers will discuss personal experiences as well as international trends. {\bf The workshop is open to anyone with interest in digital research}.
+\blank[5mm]
+The list of confirmed international speakers includes {\bf Shawn Ross} and {\bf Brian Ballsun-Stanton} from Macquarie University in Sydney, {\bf Pietro Maria Liuzzo} from Hamburg University, {\bf Tomáš Hampejs} and {\bf Adam Mertel} from Masaryk University in Brno and many others! The afternoon session will showcase the newly created research group \goto{Social Dynamics in the Ancient Mediterranean (SDAM)}[url(https://sdam-au.github.io/sdam-au/)], based at Aarhus University. 
+\blank[5mm]
+\setupalign[hz,hanging]
+
+WHEN: {\bf Wednesday 30 Oct 2019} from 9:30 to 14:30 (optional 16:00). \crlf WHERE: Aarhus University, {\bf building 1485, room 226}.
+\blank[5mm]
+\setupalign[middle]
+Register here: {\bf \goto{https://cas.au.dk/en/cedhar/events}[url(http://cas.au.dk/en/cedhar/events/show/artikel/
+digital-approaches-to-research-in-humanities-and-social-sciences/)]}
+\blank[10mm]
+
+\setupbodyfont [gentium, 24pt]
+\color[darkblue]{\bf Join us to discuss the successes and frustrations of your digital research!}
+
+
+\placefigure [bottom,none] {} {
+\startcombination[3*1] % 3 columns, 1 rows
+{\externalfigure[CEDHAR_logo.png][width=.2\textwidth]} {} {\externalfigure[sdam_logo.png][width=.08\textwidth]} {} {\externalfigure[au_logo.png][width=.2\textwidth]} {} % picture and caption for two figures in first row
+\stopcombination
+}
+
+
+\stoptext
