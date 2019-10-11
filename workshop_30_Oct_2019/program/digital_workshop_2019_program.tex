@@ -1,0 +1,99 @@
+% Flyer
+
+\enableregime [utf]
+\mainlanguage [en]
+
+\setuppapersize[A4, portrait][A4, portrait]
+%https://wiki.contextgarden.net/Simplefonts
+%\definefontfamily [main] [serif] [Palatino] [expansion=quality,protrusion=quality]
+
+
+\setupexternalfigures[directory={img, /home/petra/workshop/img}]
+
+%\definetypeface [palatino] [rm] [serif] [palatino] [default] [encoding=ec]
+%\switchtotypeface [palatino]
+
+%\setmainfont[palatino][expansion=quality,protrusion=quality]
+
+\setupalign[hz,hanging]
+
+\definefontfeature
+  [default]
+  [default]
+  [protrusion=quality,expansion=quality]
+% \definefontfamily[myfamily][serif][gentium][protrusion=quality,expansion=quality]
+
+% \setupbodyfont[myfamily,14pt]
+
+
+\setuplayout[backspace=15mm,  height=270mm, width=180mm, topspace=-10mm, header=-5mm, footer=-30mm, bottomspace=0mm]
+
+\setuppagenumbering[state=stop]
+
+\color[black]
+
+\setupalign[middle]
+
+\setupwhitespace[big]
+
+\setupinterlinespace[big]
+
+\setupindenting[medium,yes]
+\setupitemize[indentnext=auto]
+
+\setupinteraction
+   [state=start,
+    color=darkred,
+    style=bold]
+
+\starttext
+
+\placefigure[none]{}{\externalfigure[../img/workshop.png][width=1.3\textwidth]}
+
+\blank[5mm]
+\setupbodyfont [gentium, 20pt, bf]
+
+\color[darkblue]{\bf Digital Approaches to Research in Humanities and Social Sciences - program}
+
+\setupbodyfont [gentium, 12pt]
+30 October 2019, Aarhus University, building 1485, room 226
+\blank[5mm]
+
+\setupalign[hz,hanging,lesshyphenation]
+
+{\bi Session 1 - “Research standards and collaboration”}
+{\bf 9:15 - 9:30} {\em Icebreaker activity}\crlf
+{\bf 9:30 - 9:55} Trust but verify: implications of the reproducibility crisis on technology and practice in HASS disciplines {\bf \goto{Shawn Ross}[url(http://bit.ly/ShawnRossPure)]}\crlf
+{\bf 9:55 - 10:20} Lessons learned from Data Analysis projects in Natural Language Processing with Japanese and Security Studies data - Shell Scripts, Jupyter Notebooks, and the value of doctests {\bf \goto{Brian Ballsun-Stanton}[url(https://orcid.org/0000-0003-4932-7912)]} \crlf
+{\bf 10:20 - 10:45} Epigraphy.info and the Distributed Text Services. Collaboration with standards {\bf \goto{Pietro Liuzzo}[url(http://epigraphy.info/)]}
+
+10:45 - 11:00 - Coffee break
+
+{\bi Session 2 - “The realities of digital research”}\crlf
+{\bf 11:00 - 11:25} Raising the dead; technical implications {\bf \goto{Katrine Frøkjær Baunvig}[url(http://grundtvigcenteret.au.dk/)]}\crlf
+{\bf 11:25 - 11:50} DISSINET experiences and challenges in transforming history into spatial and network data {\bf \goto{Tomáš Hampejs}[url(https://dissinet.cz)]}, {\bf \goto{Adam Mertel}[url(https://dissinet.cz)]}\crlf
+{\bf 11:50 - 12:15} Some challenges to coordinated, collaborative, and cross-cultural ethnographic work {\bf \goto{Benjamin Purzycki}[url(https://bgpurzycki.wordpress.com)]}\crlf
+{\bf 12:15 - 12:40} Social media data triangulation - The Danish HPV controversy as an example {\bf \goto{Marie Louise Tørring}[url(http://www.netlab.dk/research/it-developer-projects/the-hpv-archive/)]}
+
+12:40 - 13:30 - Lunch
+
+{\bi Session 3 - “Social Dynamics in the Ancient Mediterranean research group showcase”}\crlf
+{\bf 13:30 - 13:45} Petrified voices: the evolution of the Graeco-Romanepigraphic production in space and time {\bf \goto{Petra Heřmánková}[url(https://orcid.org/0000-0002-6349-0540)]}\crlf
+{\bf 13:45 - 14:00} Social dynamics in the ancient Mediterranean and the cultural evolution of moralizing religions: a text-mining approach {\bf \goto{Vojtěch Kaše}[url(http://vojtechkase.cz)]}\crlf
+{\bf 14:00 - 14:15} Analysis with graph representation of complex networks in R: the case of Group of Twenty countries {\bf \goto{Antonio Rivero Ostoic}[url(https://github.com/mplex)]}\crlf
+{\bf 14:15 - 14:30} Small data - Big Challenges: the goals and mission of the \goto{SDAM}[url(https://sdam-au.github.io/sdam-au/)] project {\bf \goto{Adela Sobotkova}[url(http://bit.ly/AdelaAUPure)]}
+\placefigure[right,none]{}{\externalfigure[workshop_30_Oct.png][width=0.15\textwidth]}
+14:30 - 15:00 - Coffee break\crlf
+
+{\bf 15:00 - 16:00 “eResearch speed dating!” social activity \& un-conference}
+
+
+
+\placefigure [bottom,none] {} {
+\startcombination[3*1] % 4 columns, 1 rows
+{\externalfigure[CEDHAR_logo.png][width=.2\textwidth]} {} {\externalfigure[sdam_logo.png][width=.08\textwidth]} {} {\externalfigure[au_logo.png][width=.22\textwidth]} {} % picture and caption for two figures in first row
+\stopcombination
+}
+
+
+\stoptext
